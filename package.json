@@ -4,7 +4,7 @@
   "description": "Validador de boletos bancários",
   "main": "dist/boleto-brasileiro-validator.js",
   "scripts": {
-    "test": "nyc --reporter=html mocha --require babel-polyfill --require babel-register && eslint ./src/*",
+    "test": "mocha -r ts-node/register test/**/*.ts",
     "lint": "eslint ./src/*",
     "build": "webpack",
     "prepublishOnly": "npm run build"
@@ -33,23 +33,13 @@
     "url": "https://github.com/mcrvaz/boleto-brasileiro-validator/issues"
   },
   "homepage": "https://github.com/mcrvaz/boleto-brasileiro-validator#readme",
-  "dependencies": {
-    "ts-mocha": "^8.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "typescript": "^4.2.3",
+    "ts-mocha": "^8.0.0",
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.1",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "mocha": "^5.2.0",
-    "nyc": "^14.1.1",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.8"
+    "mocha": "^5.2.0"
   }
 }
