@@ -1,3 +1,3 @@
-export function clearMask(codigo) {
-  return codigo.replace(/( |\.|-)/g, '');
+export function clearMask(codigo: string): string {
+    return codigo.replace(/( |\.|-)/g, '');
 }

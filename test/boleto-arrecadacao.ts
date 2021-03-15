@@ -1,9 +1,5 @@
-const { assert } = require('../node_modules/chai/chai');
-const {
-  boletoArrecadacao,
-  boletoArrecadacaoCodigoBarras,
-  boletoArrecadacaoLinhaDigitavel,
-} = require('../src/boleto-arrecadacao');
+import {assert} from 'chai';
+import {boletoArrecadacao, boletoArrecadacaoCodigoBarras, boletoArrecadacaoLinhaDigitavel} from '../src/boleto-arrecadacao';
 
 describe('Validar Boletos de Arrecadação', () => {
   it('validação da linha digitável do boleto de arrecadação válido módulo 10 com máscara', () => {

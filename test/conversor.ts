@@ -1,5 +1,5 @@
-const { assert } = require('../node_modules/chai/chai');
-const { convertToBoletoArrecadacaoCodigoBarras, convertToBoletoBancarioCodigoBarras } = require('../src/conversor');
+import {assert} from 'chai';
+import {convertToBoletoArrecadacaoCodigoBarras, convertToBoletoBancarioCodigoBarras} from '../src/conversor';
 
 describe('Converter Boletos', () => {
   it('converte linha digitável para código de barras do boleto bancário', () => {

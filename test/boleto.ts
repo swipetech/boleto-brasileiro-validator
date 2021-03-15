@@ -1,5 +1,5 @@
-const { assert } = require('../node_modules/chai/chai');
-const { boleto } = require('../src/boleto');
+import {assert} from 'chai';
+import {boleto} from '../src/boleto';
 
 describe('Validar Boletos', () => {
   it('validar linha digitável do boleto', () => {

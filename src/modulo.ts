@@ -18,7 +18,7 @@
     g) Se o resultado da subtração for igual a 10 (dez), o dígito verificador será igual a 0
     (zero)
 */
-export function modulo10(bloco) {
+export function modulo10(bloco:string): number {
   const codigo = bloco.split('').reverse();
   const somatorio = codigo.reduce((acc, current, index) => {
     let soma = Number(current) * (((index + 1) % 2) + 1);
@@ -52,10 +52,10 @@ export function modulo10(bloco) {
       III - igual a 11....................D.V. igual a 1
       IV - diferente de 10 e 11..........D.V. será o próprio dígito, no caso do exemplo “3”
 */
-export function modulo11Bancario(bloco) {
+export function modulo11Bancario(bloco: string): number {
   const codigo = bloco.split('').reverse();
   let multiplicador = 2;
-  const somatorio = codigo.reduce((acc, current) => {
+  const somatorio = codigo.reduce((acc: number, current: any) => {
     const soma = Number(current) * multiplicador;
     multiplicador = multiplicador === 9 ? 2 : multiplicador + 1;
     return acc + soma;
@@ -77,10 +77,10 @@ export function modulo11Bancario(bloco) {
   Observação: Quando o resto da divisão for igual a 0 ou 1, atribuí-se ao DV o digito “0”,
   e quando for 10, atribuí-se ao DV o digito “1”.
 */
-export function modulo11Arrecadacao(bloco) {
+export function modulo11Arrecadacao(bloco: string): number {
   const codigo = bloco.split('').reverse();
   let multiplicador = 2;
-  const somatorio = codigo.reduce((acc, current) => {
+  const somatorio = codigo.reduce((acc: number, current: any) => {
     const soma = Number(current) * multiplicador;
     multiplicador = multiplicador === 9 ? 2 : multiplicador + 1;
     return acc + soma;

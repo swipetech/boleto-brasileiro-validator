@@ -1,5 +1,5 @@
-const { assert } = require('../node_modules/chai/chai');
-const { boletoBancario, boletoBancarioCodigoBarras, boletoBancarioLinhaDigitavel } = require('../src/boleto-bancario');
+import {assert} from 'chai';
+import {boletoBancario, boletoBancarioCodigoBarras, boletoBancarioLinhaDigitavel} from '../src/boleto-bancario';
 
 describe('Validar Boletos Bancários', () => {
   it('validação da linha digitável do boleto válido com máscara', () => {
